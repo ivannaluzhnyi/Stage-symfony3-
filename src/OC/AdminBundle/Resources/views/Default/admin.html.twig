@@ -1,0 +1,54 @@
+
+
+    {% extends "OCAdminBundle:User:form.html.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+{%block body%}
+
+<div class="table">
+<h3 class="text-center">Réponses</h3>
+<table class="table table-striped table-bordered">
+	<tr>
+		<th>ID</th>
+		<th>Enfants</th>
+		<th>Amis</th>
+		<th>Date naiss.</th>
+		<th>Raison principale de ne pas donner</th>
+		<th>Mots-clés incitant à donner</th>
+		<th>Action</th>
+	</tr>
+
+	   {% for quest in lists %}
+	<tr>
+		<td class="id">
+		
+			{{ quest.id }}  
+		</td>
+		<td>
+			{{ quest.enfants }}
+		</td>
+		<td>
+			{{ quest.amis }}  
+		</td>
+		<td>
+			{{ quest.annee }}  
+		</td>
+		<td>
+			{{ quest.raison }} 
+		</td>
+		<td>
+			 {% for quests in quest.inciter %}
+          <ul><li> {{ quests}} </li></ul> 
+      {% endfor %}</td>
+       <td>
+       
+       <a class="btn btn-info" href="{{path('admin_object_edit', {'id':quest.id})}}">Modifier</a>
+       {% if is_granted('ROLE_SUPER_ADMIN') %}
+       <a class="btn btn-danger" href="{{path('admin_object_delete', {'id':quest.id})}}">Supprimer</a>
+       </td>
+		{% endif %}
+	</tr>
+	{% endfor %}
+</table>
+</div>
+{%endblock%}

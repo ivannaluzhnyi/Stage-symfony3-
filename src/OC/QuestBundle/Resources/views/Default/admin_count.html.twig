@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><title>admin_count</title><meta charset="utf-8">
+</head>
+<body>
+<h1>HELLO WORLD => TEST </h1>
+<h4>Enfants</h4>
+ <p>le nombre de personnes qui ont repondu -OUI- <b>{{ listQuest1|length }}</b></p>
+ <p>le nombre de personnes qui ont repondu -NON-<b>{{ listQuest2|length }}</b></p> 
+ 
+ <h4>AMIS</h4>
+ <p>le nombre de personnes qui ont repondu -OUI- <b>{{ amis1|length }}</b></p>
+ <p>le nombre de personnes qui ont repondu -NON-<b>{{ amis2|length }}</b></p> 
+
+ <h4>RAISON</h4>
+ <p> -Ne savent pas à quoi cela sert- <b>{{ raison1|length }}</b></p>
+ <p> -Ont d'autres priorités de dons- <b>{{ raison2|length }}</b></p>
+ <p> -L'Église est riche- <b>{{ raison3|length }}</b></p>
+ <p> -N'ont jamais été sollicités- <b>{{ raison4|length }}</b></p>
+ <p> -N'ont jamais entendu parlé du Deniert- <b>{{ raison5|length }}</b></p>
+
+
+ <h4>INCITER</h4>
+    <p> -Devoir de baptisé- <b>  {{ inciter1|length}}</b></p>
+         
+  {% for quests in inciter1 %} {% endfor %}
+    
+
+
+    <p>Impôt volontaire des catholiques <b>{{ inciter2|length }}</b></p>
+
+
+    <p>Faire vivre mon curé et les prêtres <b>{{ inciter3|length }}</b></p>
+    <p>Rémunérer les employés (secrétaires, sacristain,organiste, ...) <b>{{ inciter4|length }}</b></p>
+	<p>Financer les travaux : (réfections, embellissement) <b>{{ inciter5|length }}</b></p>
+	<p>Payer les factures : (entretien des locaux, électricité,chauffage, Internet, Impôts, ...) <b>{{ inciter6|length }}</b></p>
+	<p>Faire connaître l’Évangile <b>{{ inciter7|length }}</b></p>
+	<p>Permettre de se former, de grandir dans la Foi à la suitede Jésus-Christ (catéchisme, aumônerie pour les jeunes, catéchuménat, parcours alpha, enseignement pour les adultes) <b>{{ inciter8|length }}</b></p>
+	<p>Assurer une présence de l’Église dans la ville <b>{{ inciter9|length }}</b></p>
+	<p>Être là auprès des pauvres, des isolés et des personnes fragiles <b>{{ inciter10|length }}</b></p>
+	<p>Accompagner les paroissiens dans les joies et les difficultés de leur inciter6 <b>{{ inciter11|length }}</b></p>
+	<P>Célébrer (eucharistie, mariage, baptême, pardon, obsèques,…) <b>{{ inciter12|length }}</b></p>
+ 
+</body>
+</html>

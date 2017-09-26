@@ -1,0 +1,4 @@
+services:
+#    oc_admin.example:
+#        class: OC\AdminBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -1,0 +1,41 @@
+{# sym3/OC/QuestBundle/Resources/views/Advert/Default/base.html.twig #}
+
+{# extends "OCQuestBundle:Default:base.html.twig" }
+{% block body %}
+<table class="table table-striped table-bordered">
+	<tr>
+		<th>ID</th>
+		<th>A vos enfants</th>
+		<th>Vos amis</th>
+		<th>Date naiss.</th>
+		<th>Selon vous, quelle raison principale empêche des pratiquants occasionnels de donner au Denier?(merci d'en retenir une seule)</th>
+		<th>Quels mots-clés vous semblent les plus pertinents et évocateurs pour inciter ceux qui ne donnent pas au Denier </th>
+	</tr>  
+	   {% for quest in listQuest %}
+	<tr>
+		<td>
+		
+			{{ quest.id }}  
+		</td>
+		<td>
+			{{ quest.enfants }}
+		</td>
+		<td>
+			{{ quest.amis }}  
+		</td>
+		<td>
+			{{ quest.annee|date('d/m/Y') }}  
+		</td>
+		<td>
+			{{ quest.raison }} 
+		</td>
+		<td>
+			 {% for quests in quest.inciter %}
+          <ul><li> {{ quests}} </li></ul> 
+      {% endfor %}
+
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock %}

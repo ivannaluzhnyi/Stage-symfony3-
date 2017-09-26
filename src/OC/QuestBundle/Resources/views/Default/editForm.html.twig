@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{{ asset('style.css') }}"/>
+	<title>QUESTION </title>
+</head>
+<style type="text/css">
+	.navbar-default{
+		float: right;
+		
+	}
+.textMoncrcl{
+  font-size: 32px;
+  color:#e8a843;
+}
+.col-sm-2, control-label {
+   margin-right: 20px;
+}
+#droite{
+	height: auto;
+}
+.gauche1{
+	height: auto;
+}
+.gauche2{
+	height: auto;
+}
+.gauche3{
+	height: auto;
+}
+#form_submit{
+	margin-left: auto;
+	margin-top: 30px;
+	
+	background-color: #008CBA;
+	 border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.s1{}
+</style>
+<body> 
+<div class ="wrapper">
+   <nav class="navbar navbar-default">
+  <div class="container-fluid">
+     <button type="button" class="btn btn-default navbar-btn" ><a href="http://localhost/sym3/web/app_dev.php/login"> Sign in</a></button>
+     <a href="http://localhost/sym3/web/app_dev.php/login"></a>
+  </div>
+</nav>
+ 
+   
+      <div class ="header">
+        <h2><b>Votre avis nousest vraiment précieux</b></h2>
+        <h5>Remplissez ce questionnaire et renvoyez-le nous sans tarder dans l'enveloppe réponse jointe. Merci!</h5>
+      </div>
+      <div class="container">
+        <div class = "content">
+        <div class="container">
+          <div class="row">        
+              <div id="droite">
+                <div class="moncercle"><b class="textMoncrcl">4</b></div> 
+                     <h4>Participer à la vie matérielle de votre paroisse vous est probablement naturel.</h4>
+                     <h4>Quels mots-clés vous semblent les plus pertinents et évocateurs pour inciter ceux qui ne donnent pas au Denier?</h4>
+                     <b>(merci de cocher les quatre à cinq les plus pertinents)</b>
+                         {{ form_start(form, {'attr': {'class': 'form-horizontal'}})  }}
+                         <div class="checkbox">
+                           {% form_theme form.inciter 'bootstrap_3_horizontal_layout.html.twig'  %}
+                                {{form_widget(form.inciter)}}
+                          
+                         </div>
+                                {{form_row(form.submit)}}
+                     </div>
+                      
+                <div class="gauche1"> 
+                  
+                    <div class="moncercle"><b class="textMoncrcl">1</b></div> 
+                       <h4>Avez-vous eu l'occasion de parler de votre don au Denier?</h4>
+                     <b> {{form_row(form.enfants)}}
+                      {{form_row(form.amis)}} </b>
+                    
+                </div>
+                
+
+                <div class="gauche2"> 
+                    <div class="moncercle" ><b class="textMoncrcl">2</b></div> 
+                       <h4>Pouvez-vous nous indiquer votre date de naissence ? </h4>
+                       {% form_theme form.annee 'bootstrap_3_horizontal_layout.html.twig'  %}
+                        {{form_widget(form.annee)}}
+                </div> 
+
+        
+                <div class="gauche3">
+                    <div class="moncercle"> <b class="textMoncrcl">3</b></div> 
+                       <h4>Selon vous, quelle raison principale empêche des pratiquants occasionnels de donner au Denier?(merci d'en retenir une seule)</h4>
+                       <b> {% form_theme form.raison 'bootstrap_3_horizontal_layout.html.twig'  %}
+                                {{form_widget(form.raison)}}</b>
+
+
+                </div>
+                <div class="sub1">
+            
+              </div>
+              <!--   <input type="submit" id="btnEnvoyer" class="btn btn-primary btn-lg btn-block" name ="sub" value="Envoyer" />-->
+              {{ form_end(form) }}
+               
+             
+           </div>
+        </div>
+      </div>
+      </div>
+
+      <div class ="footer"></div>
+    </div>
+</body>
+</html>

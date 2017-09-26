@@ -1,0 +1,60 @@
+
+{% extends "OCAdminBundle:User:form.html.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+{%block body%}
+<div class="table">
+<h3 class="text-center">Liste des administrateurs</h3>
+<table class="table table-striped table-bordered">
+ <tr>
+		<th>ID</th>
+		<th>Pseudonyme</th>
+		<th>Nom</th>
+		<th>Prénom</th>
+		<th>Email</th>
+		<th>Date de modif.</th>
+		<th>Droits</th>
+		{% if is_granted('ROLE_SUPER_ADMIN') %}
+			<th>Actions</th>
+		{% endif %}
+	</tr>  
+
+	   {% for quest in listQuest %}
+	<tr>
+		<td class="id">
+		
+			{{ quest.id }}  
+		</td>
+		<td>
+			{{ quest.username }}
+		</td>
+		<td>
+			{{ quest.nom }}  
+		</td>
+		<td>
+			{{ quest.prenom }}  
+		</td>
+		<td>
+			{{ quest.email }}  
+		</td>
+		<td>
+		   {{ quest.dateModif|date('d/m/Y') }} 
+		</td>
+		<td>
+		{% for quests in quest.roles %}
+			{{ quests| raw  }} 	
+			{% endfor %}
+		</td>
+
+		{% if is_granted('ROLE_SUPER_ADMIN') %}
+	       <td>
+	       <a class="btn btn-info" href="{{path('oc_admin_edit_user', {'id':quest.id})}}" >Modifier</a>
+	       
+	       <a class="btn btn-danger" href="{{path('oc_admin_delete_user', {'id':quest.id})}}">Supprimer</a>
+	       </td>
+		{% endif %}
+	</tr>
+	{% endfor %}
+	<!--href="path('admin_user_edit', {'id':quest.id})"->>-->
+</table>
+{%endblock%}

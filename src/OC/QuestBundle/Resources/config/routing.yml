@@ -1,0 +1,36 @@
+oc_quest_test:
+    path:     /test
+    defaults: { _controller: OCQuestBundle:Default:test }
+
+oc_quest_form:
+    path:     /
+    defaults: { _controller: OCQuestBundle:Default:new }
+
+oc_quest_homepage:
+    path:     /menu
+    defaults: { _controller: OCQuestBundle:Default:menu }
+
+oc_quest_list:
+    path:     /admin/list
+    defaults: { _controller: OCQuestBundle:Default:list }
+
+oc_quest_merci:
+    path:     /merci
+    defaults: { _controller: OCQuestBundle:Default:merci }
+
+oc_quest_admin_count:
+    path:     /admin/count
+    defaults: { _controller: OCQuestBundle:Default:admin_count }
+
+oc_quest_modif:
+    path:     /admin/list/mod
+    defaults: { _controller: OCQuestBundle:Default:admin }
+
+object_delete:
+    path:     /admin/list/delete/{id}
+    defaults: { _controller: OCQuestBundle:Default:delete }
+
+object_edit:
+    path:     /admin/list/edit/{id}
+    defaults: { _controller: OCQuestBundle:Default:edit }
+

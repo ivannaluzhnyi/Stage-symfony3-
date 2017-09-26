@@ -1,0 +1,6 @@
+# src/AppBundle/Resources/config/validation.yml
+OCAdminBundle\Entity\annee:
+    properties:
+            - Length:
+                min: 4 
+                max: 4

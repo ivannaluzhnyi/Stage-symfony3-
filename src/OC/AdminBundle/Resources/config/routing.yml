@@ -1,0 +1,48 @@
+
+oc_admin_test:
+    path:     /test
+    defaults: { _controller: OCAdminBundle:Default:layout }
+
+oc_admin_homepage:
+    path:     /menu
+    defaults: { _controller: OCAdminBundle:Default:menu }
+
+oc_admin_list:
+    path:     /list
+    defaults: { _controller: OCAdminBundle:Default:list }
+
+oc_admin_merci:
+    path:     /merci
+    defaults: { _controller: OCAdminBundle:Default:merci }
+
+oc_admin_count:
+    path:     /user/count
+    defaults: { _controller: OCAdminBundle:Default:admin_count }
+
+oc_admin_modif:
+    path:     /list/mod
+    defaults: { _controller: OCAdminBundle:Default:admin }
+
+admin_object_delete:
+    path:     /list/delete/{id}
+    defaults: { _controller: OCAdminBundle:Default:delete }
+
+admin_object_edit:
+    path:     /list/edit/{id}
+    defaults: { _controller: OCAdminBundle:Default:edit }
+
+oc_admin_create:
+    path:     /create/account
+    defaults: { _controller: OCAdminBundle:User:createAccount }
+
+oc_admin_user_list:
+    path:     /user/list
+    defaults: { _controller: OCAdminBundle:User:user_list }
+
+oc_admin_delete_user:
+    path:     /user/list/delete/{id}
+    defaults: { _controller: OCAdminBundle:User:user_delete }
+
+oc_admin_edit_user:
+    path:     /user/list/edit/{id}
+    defaults: { _controller: OCAdminBundle:User:user_edit }

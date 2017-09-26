@@ -1,0 +1,12 @@
+{% extends "OCAdminBundle:User:form.html.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block body %}
+    <h3 class="text-center">Créer un compte d'administrateur</h3>
+	  <div class="well">
+           {% form_theme form 'bootstrap_3_horizontal_layout.html.twig'  %}
+		     {{form(form)}}
+          
+		</div>
+{% endblock %}

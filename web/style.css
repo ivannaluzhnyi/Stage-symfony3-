@@ -1,0 +1,252 @@
+
+/*  index.html css  */
+
+
+.row:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.row { display: inline-block; }
+/* start commented backslash hack \*/
+* html .row { height: 1%; }
+.row { display: block; }
+/* close commented backslash hack */
+
+body{
+  background: #DEDFF1;
+}
+ h2,h5{
+  text-align:center;
+  color : #283dbe; 
+ 
+ }
+h4{
+  color : #3a4fd0;
+}
+/*
+.header{
+  height: 110px;
+}
+*/
+
+#droite p { /* Paragraphes du conteneur principal */
+font-family:"century gothic";
+font-size:1.1em;
+line-height:1.5em;
+/* width: 450px; */
+}
+#droite { /* Conteneur principal */
+float:right; /* Le cadre sort du flux */
+border:1px solid blue;
+height:auto;
+/* width:54%; */
+background-color:#FFFEFF;
+padding:15px;
+margin-right: :1px;
+
+}
+.gauche1 {
+/* float:left; */
+border:1px solid blue;
+height:auto;
+/* width:41%; */
+background-color:#FFFEFF;
+margin-right:1px;
+margin-bottom:10px;
+padding:15px;
+margin-bottom: 35px;
+}
+.gauche2 {
+/* float:left; */
+border:1px solid blue;
+height:auto;
+/* width:41%; */
+background-color:#FFFEFF;
+margin-right:1px;
+margin-bottom:10px;
+padding:15px;
+margin-bottom: 35px;
+}
+
+input[type=text] {
+    width: 250px;
+    padding: 0px 16px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-bottom-color: black;
+    border-right-style: none;
+    border-top-style: none;
+    border-left-style: none;
+    text-align:center;
+}
+
+.gauche3 {
+/* float:left; */
+border:1px solid blue;
+height:auto;
+/* width:41%; */
+background-color:#FFFEFF;
+margin-right:1px;
+margin-bottom:10px;
+padding:15px;
+margin-bottom: 35px;
+}
+
+/*.gauche p { /* Paragraphes des conteneurs secondaires */
+/*font-family:"century gothic";
+font-size:0.9em;
+line-height:1.5em;
+} 
+/*/
+
+#conteneur { /* Conteneur global pour le centrage */
+/* width:900px;
+height:640px;*/
+margin:auto;
+margin-bottom:1px;
+}
+/* #btnEnvoyer{
+  float: right;
+  width: 200px;
+  margin-top: 20px;
+}*/
+
+.moncercle{
+  background:#fefdff;
+  border-radius:50%;
+  width:45px;
+  height:45px;
+  border:3px solid #e8a843; 
+  text-align:center;
+ 
+  line-height: 39px; /* 100 - 10 */
+
+/*  index.html css  */
+
+
+.row:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.row { display: inline-block; }
+/* start commented backslash hack \*/
+* html .row { height: 1%; }
+.row { display: block; }
+/* close commented backslash hack */
+
+body{
+  background: #DEDFF1;
+}
+ h2,h5{
+  color : #283dbe;
+ }
+h4{
+  color : #3a4fd0;
+}
+
+.header{
+  height: 110px;
+}
+
+#droite p { /* Paragraphes du conteneur principal */
+font-family:"century gothic";
+font-size:1.1em;
+line-height:1.5em;
+/* width: 450px;*/
+}
+#droite { /* Conteneur principal */
+/* float:right; */ /* Le cadre sort du flux */
+border:1px solid blue;
+height:auto;
+/* width:54%;*/
+background-color:#FFFEFF;
+padding:15px;
+margin-right: :1px;
+
+}
+.gauche1 {
+/* float:left; */
+border:1px solid blue;
+height:auto;
+/* width:41%;*/
+background-color:#FFFEFF;
+margin-right:1px;
+margin-bottom:10px;
+padding:15px;
+margin-bottom: 35px;
+}
+.gauche2 {
+/* float:left;*/
+border:1px solid blue;
+height:auto;
+/* width:41%;*/
+background-color:#FFFEFF;
+margin-right:1px;
+margin-bottom:10px;
+padding:15px;
+margin-bottom: 35px;
+}
+
+input[type=text] {
+    width: 250px;
+    padding: 0px 16px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-bottom-color: black;
+    border-right-style: none;
+    border-top-style: none;
+    border-left-style: none;
+  text-align:center;
+}
+
+.gauche3 {
+/* float:left;*/
+border:1px solid blue;
+height:auto;
+/* width:41%;*/
+background-color:#FFFEFF;
+margin-right:1px;
+margin-bottom:10px;
+padding:15px;
+margin-bottom: 35px;
+}
+
+/*.gauche p { /* Paragraphes des conteneurs secondaires */
+/*font-family:"century gothic";
+font-size:0.9em;
+line-height:1.5em;
+} 
+/*/
+
+#conteneur { /* Conteneur global pour le centrage */
+/* width:900px;
+height:640px;*/
+margin:auto;
+margin-bottom:1px;
+}
+/* 
+#btnEnvoyer{
+  float: right;
+  width: 200px;
+  margin-top: 20px;
+}*/
+
+.moncercle{
+  background:#fefdff;
+  border-radius:50%;
+  width:45px;
+  height:45px;
+  border:3px solid #e8a843; 
+  line-height: 40px; 
+  font-size : 30px;
+}
+ 
+/*<font size=6 style="color:#e8a843;">
